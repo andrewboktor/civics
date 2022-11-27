@@ -23,7 +23,7 @@ const randomize = (n: number) => {
 }
 
 function Text(s: string) {
-  return s.split('\r\n').map(piece => <><br/> {piece} </>)
+  return s.split('\n').map(piece => <><br/> {piece} </>)
 }
 function App() {
   const [list, setList] = React.useState<number[]>(() => randomize(qs.length));

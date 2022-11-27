@@ -3,11 +3,11 @@ console.log('node ./parser/parser.js parser/100q.txt src/Questions.json');
 
 const text = fs.readFileSync(process.argv[2]).toString();
 
-const regex = /[0-9]+\. .+\r\n((?!\r\n\r\n\r\n)(\r\n(.*)))+/g
+const regex = /[0-9]+\. .+\n((?!\n\n\n)(\n(.*)))+/g
 
 const matches = text.match(regex);
 
-const baby = /([0-9]+\. .+)\r\n((\r\n.*)+)/
+const baby = /([0-9]+\. .+)\n((\n.*)+)/
 
 const qna = matches.map(m => {
     const full = m.match(baby);

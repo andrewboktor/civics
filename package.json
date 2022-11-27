@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "node parser/parser.js parser/100q.txt src/Questions.json && react-scripts build",
+    "build": "patch parser/100q.txt parser/100q.txt.patch -o parser/100q.patched.txt && node parser/parser.js parser/100q.patched.txt src/Questions.json && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

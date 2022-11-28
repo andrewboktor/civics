@@ -45,6 +45,7 @@ function App() {
       {showA && <h2>{Text(qs[currQ].A)}</h2>}
       <button onClick={onShowA}>Show Answer</button>
       <button onClick={onNext}>Next Question</button>
+      <div>Remaining questions {list.length}</div>
     </>
   );
 }
